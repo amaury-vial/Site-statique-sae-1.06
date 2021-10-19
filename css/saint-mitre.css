@@ -1,0 +1,7 @@
+ul
+{
+    list-style-type: none;/* Pour retirer les vignettes devant chaque li */
+    display: flex;
+    justify-content: space-around;
+    
+}
