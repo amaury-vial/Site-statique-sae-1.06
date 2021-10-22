@@ -6,3 +6,56 @@ ul
     
 }
 
+.img_banniere
+{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 1000px){
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}
+
+.title h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    background-color: royalblue;
+}
+
+.title h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    background-color: royalblue;
+    text-decoration: underline;
+}
+
+.back {
+    margin: 15px;
+    background-color: gray;
+}
+
+.txt_national{
+    text-align: left;
+}
+
+.espace{
+    padding-bottom: 25px;
+}
+

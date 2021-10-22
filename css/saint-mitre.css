@@ -3,5 +3,48 @@ ul
     list-style-type: none;/* Pour retirer les vignettes devant chaque li */
     display: flex;
     justify-content: space-around;
-    
+
+}
+
+iframe{
+    padding-top: 2em;
+    margin-left: 2em;
+    width: 20%;
+}
+
+.présentation{
+    display: block;
+    align-content: center;
+}
+
+.Tab{
+    padding-top: 2em;
+    margin-left: 2em;
+}
+td {
+    border: 1px solid #ddd ;
+    width: 20%;
+    height: 5%;
+    padding: 15px 20px;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    font-family: arial;
+    text-align: center
+
+}
+
+
+tr {
+    border: 5px solid #191970;
+    background-color: midnightblue;
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    font-family: arial;
+    text-align: center;
+
+}
+
+.asoss{
+    display: flex;
+    justify-content: center;
 }
