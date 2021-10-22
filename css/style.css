@@ -1,61 +1,133 @@
-ul
-{
-    list-style-type: none; /* Pour retirer les vignettes devant chaque li */
-    display: flex;
-    justify-content: space-around;
-    
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.img_banniere
-{
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    padding-bottom: 75px;
+}
+
+body .header .nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    align-items: center;
+    background: rgba(88, 99, 248, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+body .header .nav .nav-btn a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: #264653;
+}
+body .header .nav .nav-btn a::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background-color: #5863F8;
+    box-shadow: 0 3px 12px #5863F8;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+body .header .nav .nav-btn a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+body .content {
+    margin-top: 50px;
+}
+
+body .content .img-banniere {
     width: 40%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.2s transform;
 }
 
-@media screen and (max-width: 1000px){
-    ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+body .content .img-banniere:hover {
+    transition: 0.2s transform;
+    transform: scale(105%);
+}
+
+body .content .text-content {
+    margin-top: 25px;
+}
+
+body .content .text-content .title-big {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    color: #264653;
+}
+
+body .content .text-content .text-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px auto;
+    width: 80%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+body .content .text-content .text-block .text {
+    width: 50%;
+    min-width: 450px;
+    background: #E5ECF4;
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+body .content .text-content .text-block .text:nth-child(2) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+body .content .text-content .text-block .text .sub-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #264653;
+}
+
+body .content .text-content .text-block .text .txt {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+    body .content .img-banniere {
+        width: 75%;
+    }
+    body .content .text-content .text-block .text {
+        width: 100%;
     }
 }
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: antiquewhite;
-}
-
-.title h1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid red;
-    background-color: royalblue;
-}
-
-.title h2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid red;
-    background-color: royalblue;
-    text-decoration: underline;
-}
-
-.back {
-    margin: 15px;
-    background-color: gray;
-}
-
-.txt_national{
-    text-align: left;
-}
-
-.espace{
-    padding-bottom: 25px;
-}
-

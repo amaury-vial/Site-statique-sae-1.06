@@ -1,50 +1,159 @@
-ul
-{
-    list-style-type: none;/* Pour retirer les vignettes devant chaque li */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    padding-bottom: 75px;
+}
+
+body .header .nav {
+    list-style-type: none;
     display: flex;
     justify-content: space-around;
-
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    align-items: center;
+    background: rgba(88, 99, 248, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
-iframe{
-    padding-top: 2em;
-    margin-left: 2em;
-    width: 20%;
+body .header .nav .nav-btn a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: #264653;
 }
 
-.présentation{
-    display: block;
-    align-content: center;
+body .header .nav .nav-btn a::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background-color: #5863F8;
+    box-shadow: 0 3px 12px #5863F8;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
-.Tab{
-    padding-top: 2em;
-    margin-left: 2em;
+body .header .nav .nav-btn a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
+
+body .content {
+    margin-top: 50px;
+}
+
+body .content .img-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+body .content .img-holder .img {
+    width: 250px;
+    align-self: center;
+    cursor: pointer;
+}
+
+body .content .city-info {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+body .content .city-info .map {
+    width: 300px;
+    height: 300px;
+}
+
+body .content .city-info .table {
+    margin-left: 25px;
+    width: 350px;
+}
+
+body .content .asoss {
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body .content .asoss .text-holder {
+    width: 100%;
+}
+
+body .content .asoss .text-holder .link {
+    text-align: center;
+    width: 100%;
+}
+
+body .content .asoss .text-holder .mini-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: justify;
+    width: 400px;
+}
+
+body .content .texts {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 150px;
+    background: #E5ECF4;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+body .content .texts .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #264653;
+}
+body .content .texts p {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+}
+
 td {
-    border: 1px solid #ddd ;
+    border: 1px solid #ddd;
     width: 20%;
     height: 5%;
     padding: 15px 20px;
-    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
     font-family: arial;
     text-align: center
-
 }
-
 
 tr {
     border: 5px solid #191970;
     background-color: midnightblue;
     color: #fff;
     padding: 15px 20px;
-    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
     font-family: arial;
     text-align: center;
-
-}
-
-.asoss{
-    display: flex;
-    justify-content: center;
 }
